@@ -34,10 +34,141 @@
   - 数据统计
 
 ## 环境要求 🔧
-- JDK 1.8+
-- Maven 3.5+
-- MySQL 5.7+
-- IDE推荐：IntelliJ IDEA
+### 基础环境
+- JDK 1.8+ (推荐1.8.0_271)
+  - 配置JAVA_HOME环境变量
+  - 配置Path环境变量
+- Maven 3.5+ (推荐3.8.1)
+  - 配置MAVEN_HOME环境变量
+  - 配置Path环境变量
+- MySQL 5.7+ (推荐5.7.36)
+  - 确保开启远程访问权限
+  - 默认端口3306
+
+### 开发工具
+- IDE：IntelliJ IDEA 2021.2+ (推荐Ultimate版本)
+  - 安装Maven插件
+  - 安装Lombok插件
+  - 安装Spring Boot插件
+- 数据库管理工具：Navicat Premium 15+ / MySQL Workbench 8.0+
+- 接口测试工具：Postman 8.0+ / Apifox
+
+### 浏览器要求
+- Chrome 90+
+- Firefox 88+
+- Edge 90+
+- Safari 14+
+
+### Node.js环境（前端开发）
+- Node.js 14+ (推荐14.17.0)
+  - 下载地址：https://nodejs.org/
+  - Windows系统选择.msi安装包
+  - 安装时勾选"Automatically install the necessary tools"
+- npm 6+ (推荐6.14.13，Node.js安装时会自带)
+- Vue CLI
+  ```bash
+  # 安装Vue CLI
+  npm install -g @vue/cli
+  
+  # 验证安装
+  vue --version
+  ```
+
+### 前端开发环境配置步骤
+1. 安装Node.js
+   - 下载并运行Node.js安装程序
+   - 验证安装：
+     ```bash
+     node --version
+     npm --version
+     ```
+   - 配置npm镜像（推荐使用淘宝镜像）：
+     ```bash
+     npm config set registry https://registry.npmmirror.com
+     ```
+
+2. 安装Vue开发工具
+   - 安装Vue CLI：
+     ```bash
+     npm install -g @vue/cli
+     ```
+   - 安装Vue开发者工具（Vue Devtools）浏览器插件
+
+3. IDE配置（VS Code推荐插件）
+   - Vetur (Vue工具集)
+   - Vue VSCode Snippets
+   - ESLint
+   - Prettier
+   - Auto Close Tag
+   - Auto Rename Tag
+
+4. 前端项目启动
+   ```bash
+   # 进入前端项目目录
+   cd src/main/resources/admin/admin
+   
+   # 安装依赖
+   npm install
+   
+   # 启动开发服务器
+   npm run serve
+   ```
+
+### 系统要求
+- Windows 10/11 (推荐Windows 10专业版)
+  - 至少8GB RAM
+  - 至少100GB可用磁盘空间
+- macOS Catalina (10.15) 或更高版本
+- Linux (Ubuntu 18.04+, CentOS 7+)
+
+### 网络要求
+- 稳定的互联网连接
+- 确保Maven仓库可访问
+- 确保npm仓库可访问
+
+### 推荐的开发环境配置步骤
+1. 安装JDK 1.8
+   - 下载并安装JDK
+   - 配置环境变量：
+     ```
+     JAVA_HOME=C:\Program Files\Java\jdk1.8.0_271
+     Path=%JAVA_HOME%\bin
+     ```
+   - 验证：`java -version`
+
+2. 安装Maven
+   - 下载并解压Maven
+   - 配置环境变量：
+     ```
+     MAVEN_HOME=C:\Program Files\Apache\maven
+     Path=%MAVEN_HOME%\bin
+     ```
+   - 验证：`mvn -version`
+
+3. 安装MySQL
+   - 下载并安装MySQL 5.7
+   - 记住root密码
+   - 配置允许远程访问
+   - 验证：`mysql -u root -p`
+
+4. 安装IDEA
+   - 下载并安装IntelliJ IDEA Ultimate
+   - 安装必要插件：
+     - Lombok
+     - Spring Boot
+     - Maven Helper
+     - MySQL Database
+
+5. 配置Maven镜像
+   - 修改settings.xml，添加阿里云镜像：
+     ```xml
+     <mirror>
+       <id>alimaven</id>
+       <name>aliyun maven</name>
+       <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+       <mirrorOf>central</mirrorOf>
+     </mirror>
+     ```
 
 ## 部署步骤 📥
 
@@ -67,7 +198,10 @@ mvn clean install -DskipTests
 
 ### 4. 启动项目
 1. 运行主类`LelenongchanpinxiaoshouApplication`
-2. 访问 http://localhost:8080
+2. 访问 http://localhost:8080/lelenongchanpinxiaoshou/front/index.html
+3. 后台登录页面 http://localhost:8080/lelenongchanpinxiaoshou/admin/dist/index.html
+   账号/密码均是admin
+
 
 ## 开发建议 💡
 1. 建议使用IDEA开发，方便调试
@@ -99,5 +233,3 @@ lelenongchanpinxiaoshou
 │   ├── static          // 静态资源
 │   └── templates       // 页面模板
 ```
-
-# FarmProductSales
