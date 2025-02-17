@@ -105,8 +105,24 @@ spring:
 
 ### 4. 访问项目 🌐
 - 前台访问地址：http://localhost:8080/lelenongchanpinxiaoshou/front/index.html
+  - 普通用户账号/密码：a1/123456
+  - 可以注册新用户进行体验
+
 - 后台访问地址：http://localhost:8080/lelenongchanpinxiaoshou/admin/dist/index.html
-- 默认管理员账号/密码：admin/admin
+  - 管理员账号/密码：admin/admin
+  - 商家账号/密码：商家1/123456
+
+### 5. 角色说明 👥
+- 管理员：系统最高权限，可以管理所有功能
+- 商家：可以管理自己的商品和订单
+- 用户：可以浏览商品、下单、管理个人信息
+
+### 6. 测试数据 📝
+系统内置了测试数据，包括：
+- 示例商品数据
+- 示例订单数据
+- 示例用户评价
+- 商品分类数据
 
 ## 项目亮点 💡
 - 前后端分离架构，提高开发效率 🔄
